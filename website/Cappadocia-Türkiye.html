@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WanderScape - Türkiye</title>
+    <link rel="stylesheet" href="/website/test.css">
+</head>
+<body>
+
+<header>
+    <div class="brand">
+        <span class="logo"></span> <span>WanderScape</span>
+      </div>
+</header>
+
+<div class="hero">Cappadocia, Türkiye</div>
+
+<div class="content">
+    <h2>About Türkiye</h2>
+    <p>
+        Cappadocia is famous for its otherworldly landscapes, fairy chimneys, and magical hot air balloon rides. Ancient cave dwellings, rock-cut churches, and underground cities tell the story of centuries of history in this enchanting region.
+    </p>
+
+    <h2>Photo Gallery</h2>
+    <div class="gallery">
+        <img src="/website/images/Göreme Open-Air Museum.jpg" alt="Göreme Open-Air Museum">
+        <img src="/website/images/Derinkuyu Underground City.jpg" alt="Derinkuyu Underground City">
+        <img src="/website/images/Uchisar Castle.jpg" alt="Uchisar Castle">
+    </div>
+
+    <a href="index.html" class="back-link">← Back to Home</a>
+</div>
+<script>
+  // Reveal paragraphs on scroll
+  const paragraphs = document.querySelectorAll("p");
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add("visible");
+      }
+    });
+  },{ threshold: 0.3 });
+
+  paragraphs.forEach(p=>observer.observe(p));
+</script>
+
+</body>
+</html>

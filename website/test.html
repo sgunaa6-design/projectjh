@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WanderScape - Paris</title>
+    <link rel="stylesheet" href="/website/test.css">
+</head>
+<body>
+
+<header>
+    <div class="brand">
+        <span class="logo"></span> <span>WanderScape</span>
+      </div>
+</header>
+
+<div class="hero">Bali, Indonesia</div>
+
+<div class="content">
+    <h2>About Bali</h2>
+    <p>
+        Bali is an island paradise known for its lush green rice terraces, stunning beaches, and vibrant culture. Visitors can enjoy the blend of serene natural beauty and rich traditions, with colorful ceremonies and warm hospitality at every turn. From adventurous water sports to peaceful yoga retreats, Bali offers something for every traveler.
+    </p>
+
+    <h2>Photo Gallery</h2>
+    <div class="gallery">
+        <img src="/website/images/Uluwatu Temple.webp" alt="Uluwatu Temple">
+        <img src="/website/images/Tegallalang Rice Terraces.webp" alt="Tegallalang Rice Terraces">
+        <img src="/website/images/Tanah Lot.jpeg" alt="Tanah Lot">
+    </div>
+
+    <a href="index.html" class="back-link">← Back to Home</a>
+</div>
+<script>
+  // Reveal paragraphs on scroll
+  const paragraphs = document.querySelectorAll("p");
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add("visible");
+      }
+    });
+  },{ threshold: 0.3 });
+
+  paragraphs.forEach(p=>observer.observe(p));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WanderScape - Maldives</title>
+    <link rel="stylesheet" href="/website/test.css">
+</head>
+<body>
+
+<header>
+    <div class="brand">
+        <span class="logo"></span> <span>WanderScape</span>
+      </div>
+</header>
+
+<div class="hero">Baa Atoll, Maldives</div>
+
+<div class="content">
+    <h2>About Maldives</h2>
+    <p>
+        Baa Atoll is a UNESCO Biosphere Reserve, famous for its crystal-clear waters, coral reefs, and rich marine life. It’s a paradise for snorkeling, diving, and experiencing the beauty of untouched tropical islands. The serene environment offers the ultimate luxury escape.
+    </p>
+
+    <h2>Photo Gallery</h2>
+    <div class="gallery">
+        <img src="/website/images/Uluwatu Temple.webp" alt="Hanifaru Bay">
+        <img src="/website/images/Dharavandhoo Island.webp" alt="Dharavandhoo Island">
+        <img src="/website/images/Kihaadhoo Island.webp" alt="Kihaadhoo Island">
+    </div>
+
+    <a href="index.html" class="back-link">← Back to Home</a>
+</div>
+<script>
+  // Reveal paragraphs on scroll
+  const paragraphs = document.querySelectorAll("p");
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add("visible");
+      }
+    });
+  },{ threshold: 0.3 });
+
+  paragraphs.forEach(p=>observer.observe(p));
+</script>
+
+</body>
+</html>

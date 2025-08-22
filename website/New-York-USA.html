@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WanderScape - USA</title>
+    <link rel="stylesheet" href="/website/test.css">
+</head>
+<body>
+
+<header>
+    <div class="brand">
+        <span class="logo"></span> <span>WanderScape</span>
+      </div>
+</header>
+
+<div class="hero">New York, USA</div>
+
+<div class="content">
+    <h2>About USA</h2>
+    <p>
+        The city that never sleeps, New York is a bustling metropolis full of energy, culture, and iconic landmarks. From Broadway shows to world-class museums and diverse cuisine, NYC is a vibrant mix of experiences for every kind of traveler.
+    </p>
+
+    <h2>Photo Gallery</h2>
+    <div class="gallery">
+        <img src="/website/images/Statue of Liberty.png" alt="Statue of Liberty">
+        <img src="/website/images/Central Park.avif" alt="Central Park">
+        <img src="/website/images/Times Square.jpg" alt="Times Square">
+    </div>
+
+    <a href="index.html" class="back-link">← Back to Home</a>
+</div>
+<script>
+  // Reveal paragraphs on scroll
+  const paragraphs = document.querySelectorAll("p");
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add("visible");
+      }
+    });
+  },{ threshold: 0.3 });
+
+  paragraphs.forEach(p=>observer.observe(p));
+</script>
+
+</body>
+</html>

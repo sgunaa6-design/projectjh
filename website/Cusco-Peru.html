@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WanderScape - Peru</title>
+    <link rel="stylesheet" href="/website/test.css">
+</head>
+<body>
+
+<header>
+    <div class="brand">
+        <span class="logo"></span> <span>WanderScape</span>
+      </div>
+</header>
+
+<div class="hero">Cusco, Peru</div>
+
+<div class="content">
+    <h2>About Peru</h2>
+    <p>
+        Once the capital of the Inca Empire, Cusco is a city of history and culture, with stunning colonial architecture built on ancient stone foundations. It’s the gateway to the Sacred Valley and Machu Picchu, offering breathtaking scenery and a fascinating past.
+    </p>
+
+    <h2>Photo Gallery</h2>
+    <div class="gallery">
+        <img src="/website/images/Plaza de Armas.jpg" alt="Plaza de Armas">
+        <img src="/website/images/Sacsayhuamán.jpg" alt="Sacsayhuamán">
+        <img src="/website/images/Qorikancha Temple.webp" alt="Qorikancha Temple">
+    </div>
+
+    <a href="index.html" class="back-link">← Back to Home</a>
+</div>
+<script>
+  // Reveal paragraphs on scroll
+  const paragraphs = document.querySelectorAll("p");
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add("visible");
+      }
+    });
+  },{ threshold: 0.3 });
+
+  paragraphs.forEach(p=>observer.observe(p));
+</script>
+
+</body>
+</html>

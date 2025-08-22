@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WanderScape - Japan</title>
+    <link rel="stylesheet" href="/website/test.css">
+</head>
+<body>
+
+<header>
+    <div class="brand">
+        <span class="logo"></span> <span>WanderScape</span>
+      </div>
+</header>
+
+<div class="hero">Kyoto, Japan</div>
+
+<div class="content">
+    <h2>About Bali</h2>
+    <p>
+        Kyoto, once Japan’s imperial capital, is a city where tradition meets elegance. Famous for its ancient temples, peaceful Zen gardens, and beautiful seasonal landscapes, Kyoto captures the essence of Japanese culture. The cherry blossoms in spring and vibrant maple leaves in autumn make it a year-round delight.
+    </p>
+
+    <h2>Photo Gallery</h2>
+    <div class="gallery">
+        <img src="/website/images/Fushimi Inari Taisha.jpg" alt="Fushimi Inari Taisha">
+        <img src="/website/images/Kiyomizu-dera Temple.jpg" alt="Kiyomizu-dera Temple">
+        <img src="/website/images/Arashiyama Bamboo Grove.jpg" alt="Arashiyama Bamboo Grove">
+    </div>
+
+    <a href="index.html" class="back-link">← Back to Home</a>
+</div>
+<script>
+  // Reveal paragraphs on scroll
+  const paragraphs = document.querySelectorAll("p");
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add("visible");
+      }
+    });
+  },{ threshold: 0.3 });
+
+  paragraphs.forEach(p=>observer.observe(p));
+</script>
+
+</body>
+</html>

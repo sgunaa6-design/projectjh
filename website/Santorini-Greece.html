@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WanderScape - Greece</title>
+    <link rel="stylesheet" href="/website/test.css">
+</head>
+<body>
+
+<header>
+    <div class="brand">
+        <span class="logo"></span> <span>WanderScape</span>
+      </div>
+</header>
+
+<div class="hero">Santorini, Greece</div>
+
+<div class="content">
+    <h2>About Santorini</h2>
+    <p>
+        Santorini’s whitewashed houses with blue-domed roofs perched above the Aegean Sea are postcard-perfect. This volcanic island offers stunning sunsets, unique beaches with red and black sands, and charming villages. The local cuisine and romantic atmosphere make it an unforgettable destination
+    </p>
+
+    <h2>Photo Gallery</h2>
+    <div class="gallery">
+        <img src="/website/images/Oia Village.jpg" alt="Oia Village">
+        <img src="/website/images/Red Beach.jpg" alt="Red Beach">
+        <img src="/website/images/Akrotiri Archaeological Site.jpg" alt="Akrotiri Archaeological Site">
+    </div>
+
+    <a href="index.html" class="back-link">← Back to Home</a>
+</div>
+<script>
+  // Reveal paragraphs on scroll
+  const paragraphs = document.querySelectorAll("p");
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add("visible");
+      }
+    });
+  },{ threshold: 0.3 });
+
+  paragraphs.forEach(p=>observer.observe(p));
+</script>
+
+</body>
+</html>
